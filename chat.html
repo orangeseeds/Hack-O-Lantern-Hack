@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <style media="screen">
+      #pop-wrapper{
+        display: none;
+      }
+
+      #view1 {
+      	background-color: #000;
+      	height: 500px;
+      	width: 300px;
+      	overflow: scroll;
+      }
+
+      #person1 {
+        width: 300px;
+        padding: 10px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="pop-wrapper">
+          <center>
+              <h2>Congratulation you've been matched up with HalloweenUser123</h2>
+          </center>
+
+          <div class="">
+            <center>
+            <h4>Here you can make your plans with HalloweenUser123</h4>
+
+          <div id="view1"></div>
+          <div id="persona">
+          <input type="text" id="person1" placeholder="Type your message in here..." />
+          </div>
+        </center>
+      </div>
+    </div>
+  </body>
+
+<script type="text/javascript">
+
+function PopUp(){
+  document.getElementById('pop-wrapper').style.display="block";
+}
+document.addEventListener("DOMContentLoaded", function() {
+ setTimeout(function() {
+  PopUp();
+}, 500)
+});
+
+function selfie1(){
+  var a = document.getElementById("person1").value;
+  var para1 = document.createElement("div");
+  para1.style.backgroundColor= "gold";
+  para1.style.width="100px";
+  para1.style.padding ="10px";
+  para1.style.float ="left";
+  para1.style.clear = "both";
+  para1.style.margin = "5px";
+  var node = document.createTextNode(a);
+  para1.appendChild(node);
+  var x = document.getElementById("view1");
+  x.appendChild(para1);
+  document.getElementById("person1").value = "";
+  document.getElementById("person1").focus;
+}
+
+document.getElementById("person1")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+      selfie1();
+      setTimeout(function() {
+       response();
+     }, 500)
+    }
+});
+
+function response(){
+  var b = "Ok :)";
+  var para2 = document.createElement("div");
+  para2.style.backgroundColor= "Red";
+  para2.style.width="100px";
+  para2.style.padding ="10px";
+  para2.style.float ="right";
+  para2.style.clear = "both";
+  para2.style.margin = "5px";
+  var node = document.createTextNode(b);
+  para2.appendChild(node);
+  var x = document.getElementById("view1");
+  x.appendChild(para2);
+}
+</script>
+
+</html>
