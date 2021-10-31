@@ -49,7 +49,7 @@
                 zoom: 10
             }
             var map = new L.map('map', mapOptions);
-            var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+            var layer = new L.TileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
 
             L.marker([randomLat1, randomLon1]).addTo(map)
                 .bindPopup('Halloween Party 1 </br><a href="./chat.html">Register Here</a>')
